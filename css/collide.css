@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3em;
+  font-family: "VT323", sans-serif;
+  letter-spacing: 0.1em;
+  color: #D7C2AB;
+  background-color: #4D4D63;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -160px;
+  margin-left: -110px;
+  width: 220px;
+  text-align: center;
+}
+#keysIcons {
+  font-size: 0.85em;
+}
+
+#pressedKeys {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+#map {
+  height: 170px;
+  padding-top: 25px;
+  letter-spacing: normal;
+  font-family: "Share Tech Mono", sans-serif;
+  font-size: 1em;
+  background-color: #F62F6D;
+  color: #D7C2AB;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
