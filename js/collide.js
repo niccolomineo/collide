@@ -39,7 +39,7 @@ for (i=0; i < map.length; i++) {
   map[i] === undefined ? map[i] = floor : map[i];
 }
 
-mapText.innerText = map.join('').replace(mapWidthRegExInstance,'$1\n'); // flattens map, adds new line every 15 chars and draws the whole thing
+mapText.textContent = map.join('').replace(mapWidthRegExInstance,'$1\n'); // flattens map, adds new line every 15 chars and draws the whole thing
 
 document.onkeydown = function(e) {
 
@@ -47,22 +47,22 @@ document.onkeydown = function(e) {
     case 37:
     moveToPos = map.indexOf(O) - 1;
     O = '\u25C2';
-    keyDownText.innerText = 'left';
+    keyDownText.textContent = 'left';
     break;
     case 38:
     moveToPos = map.indexOf(O) - mapWidth;
     O = '\u25B4';
-    keyDownText.innerText = 'up';
+    keyDownText.textContent = 'up';
     break;
     case 39:
     moveToPos = map.indexOf(O) + 1;
     O = '\u25B8';
-    keyDownText.innerText = 'right';
+    keyDownText.textContent = 'right';
     break;
     case 40:
     moveToPos = map.indexOf(O) + mapWidth;
     O = '\u25BE';
-    keyDownText.innerText = 'down';
+    keyDownText.textContent = 'down';
     break;
   }
 
@@ -75,6 +75,6 @@ document.onkeydown = function(e) {
     map.splice(userPos, 1, O); // keep user in the same position
   }
 
-  mapText.innerText = map.join('').replace(mapWidthRegExInstance,"$1\n");
+  mapText.textContent = map.join('').replace(mapWidthRegExInstance,"$1\n");
 
 }
