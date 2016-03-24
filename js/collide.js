@@ -32,7 +32,7 @@ var fileName = 'map';
           X = '8',
           floor = '\u00A0',
           responseText = file.responseText,
-          map = responseText.replace(/\n/g, '').split(','),
+          map = responseText.replace(/\n/g, '').split(''),
           mapWidth = responseText.replace(/\,/g, '').split('\n')[0].length,
           mapWidthRegEx = '(.{' + mapWidth + '})',
           mapWidthRegExInstance = new RegExp(mapWidthRegEx, "g"),
@@ -43,11 +43,11 @@ var fileName = 'map';
           e = e || window.event;
 
         for (i = 0; i < map.length; i++) {
-          map[i] === ' ' ? map[i] = floor : map[i];
-          map[i] === 'X' ? map[i] = X : map[i];
           map[i] === 'O' ? map[i] = O : map[i];
+          map[i] === 'X' ? map[i] = X : map[i];
+          map[i] === ' ' ? map[i] = floor : map[i];
         }
-
+      console.log(responseText, map);
         mapText.textContent = map.join('').replace(mapWidthRegExInstance, '$1\n'); // flattens map, adds new line every 15 chars and draws the whole thing
 
         document.onkeydown = function(e) {
